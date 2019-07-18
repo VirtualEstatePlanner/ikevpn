@@ -8,3 +8,8 @@ To destroy the VPN:
 
 1. Run `chmod +x kill-vpn.sh`.
 2. Run `./kill-vpn.sh`.
+
+To recreate the vpn the very lazy way:
+
+1. Run `chmod +x new-vpn.sh`.
+2. Run `./new-vpn.sh`.
