@@ -18,4 +18,4 @@ filename=$TEMPGLOBAL
 TEMPGLOBAL=''
 docker pull georgegeorgulasiv/ikevpn
 docker run --privileged -d --name ikevpn --restart=always -p 500:500/udp -p 4500:4500/udp georgegeorgulasiv/ikevpn
-docker run --privileged --rm --volumes-from ikevpn -e "HOST=$vpnhost" -e "CONN_NAME=$connection" -e "PROFILE_NAME=$profile" georgegeorgulasiv/ikevpn make-config.sh > $filename.mobileconfig
+docker run --privileged --rm --volumes-from ikevpn -e "HOST=$vpnhost" -e "CONN_NAME=$connection" -e "PROFILE_NAME=$profile" georgegeorgulasiv/ikevpn /usr/bin/make-config.sh > $filename.mobileconfig
